@@ -35,6 +35,50 @@ go help GOPATH
 > It is implemented by and documented in the go/build package.
 
 
+## Lexer and type
+
+- if use `;`, automatic removed
+    - 세미콜론을 생략할 수 있음.
+    - 알아서 삽입되는 경우가 있는듯.
+- type -> case sensitive
+    - `fmt.Println()` , Println() is public funciton.
+- everything is type
+
+
+## Variables
+
+```txt
+main.go:1:1: expected 'package', found 'EOF'
+```
+
+- pacakge 를 못찾았나?
+- https://stackoverflow.com/questions/31110191/go-failing-expected-package-found-eof 
+- vscode 저장 관련 이슈 인듯
+
+
+```go
+var username string = "han"
+fp
+```
+
+- var | name | type
+- shortcut for `fmt.PrintLn()`
+
+
+```go
+var smallVal uint8 = 255
+```
+
+- 0 <= uint8 <= 255
+- https://go.dev/ref/spec#Numeric_types
+
+```go
+numberOfUser := 300_000 // declaration + assignment
+numberOfUser = 300_000  // assignment
+```
+
+- `var foo int = 10` 와 `foo := 100` 은 같다.
+- https://stackoverflow.com/questions/17891226/difference-between-and-operators-in-go
 
 ## Reference
 - https://go.dev/doc/

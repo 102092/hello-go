@@ -106,6 +106,38 @@ strconv.ParseFloat(strings.TrimSpace(input), 64)
 
 ## Time
 
+## Build
+
+- `GOOS`
+
+```go
+GOOS="windows" go build
+```
+
+- go file을 윈도우 포멧에 맞게 빌드시킬 수 있음.
+
+## Memory Management
+
+- memory allocation and deallocation happens automatically
+- not developer jobs
+- `new()`
+    - allocate memory but no INIT(initialized)
+    - you will get a memory address
+    - **zeroed storage**
+        - actually cannot put any data initially
+- `make()`
+    - allocate memory and INIT
+    - you will get a memory address
+    - **non-zeroed storage**
+        - actually go head and put any of the data
+- GC happens automatically
+    - threshold가 있어서, 이 기준점을 넘으면 GC가 자동으로 호출되는듯
+    - 기준이 100이면 아마도 이전 GC로 부터 살아남은 객채 70인데, 이번에 새로 할당되는 데이터가 30정도 크기라면 GC 호출.
+    - 그러면 메모리가 꽉차는 경우도 있을듯
+- Out of Scope of nil (null)
+- https://pkg.go.dev/runtime
+- func `NumCPU()`
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

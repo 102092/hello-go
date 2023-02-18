@@ -80,6 +80,32 @@ numberOfUser = 300_000  // assignment
 - `var foo int = 10` 와 `foo := 100` 은 같다.
 - https://stackoverflow.com/questions/17891226/difference-between-and-operators-in-go
 
+
+## User input
+- go don't have the *try~catch*
+- error를 변수 다루듯이 다룰 수 있는듯
+
+```go
+input, _ := reader.ReadString('\n')
+```
+- 입력값을 받는데 문제가 없으면 input으로 할당될 것.
+- 그렇지만 입력값을 받는데 문제가 있으면, `_` 로 할당됨. (에러명을 따로 할당해주지 않는 syntax인듯)
+- how to string input convert int ?
+- https://stackoverflow.com/questions/65748509/vscode-shows-an-error-when-having-multiple-go-projects-in-a-directory
+    - 참고해서 multi module 때문에서 발생하는 문제 해결
+- https://pkg.go.dev/bufio
+
+
+## Conversion
+```go
+strconv.ParseFloat(strings.TrimSpace(input), 64)
+```
+
+- float 으로 변환
+- `\n` 같은 입력값을 지워주는 TrimSpace
+
+## Time
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

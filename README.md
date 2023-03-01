@@ -172,6 +172,19 @@ GOOS="windows" go build
 - reference 하고 있는 변수에 * 붙이면, 포인터 내부에 무슨값이 있는지 알고 싶다라는 의미인듯.
 - mutex 부분에서 또 나옴
 - `final` 과 같은 선언은 없을까?
+    - `const` 가 있는듯
+
+## Array
+- 생성시 arry 크기가 반드시 있어야함
+    - 반드시는 아닌듯..?
+
+```go
+	var fruitList = []string{}
+```
+
+## Slice
+- slice ?
+    - `[]` 를 의미하는듯
 
 ## Reference
 - https://go.dev/doc/

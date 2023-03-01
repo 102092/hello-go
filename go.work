@@ -5,5 +5,7 @@ use (
 	./02--variables
 	./03--user-input
 	./04--conversion
-	./05--time
+	./05--times
+	./06--pointer
+	./07--my-array
 )

@@ -77,6 +77,19 @@ numberOfUser := 300_000 // declaration + assignment
 numberOfUser = 300_000  // assignment
 ```
 
+> numberOfUser := 300_000...
+
+```go
+var numberOfUser int // declartion
+numberOfUser = 300_000 // assignment
+
+// OR
+var numberOfUser int = 300_000
+
+// OR
+var numberOfUser = 300_000
+```
+
 - `var foo int = 10` 와 `foo := 100` 은 같다.
 - https://stackoverflow.com/questions/17891226/difference-between-and-operators-in-go
 
@@ -137,6 +150,28 @@ GOOS="windows" go build
 - Out of Scope of nil (null)
 - https://pkg.go.dev/runtime
 - func `NumCPU()`
+
+## Pointer
+```go
+	// init
+	myNumber := 23
+
+	// creating pointer and reference some memory (myNumber)
+	// reference -> &
+	var ptr = &myNumber
+
+	fmt.Println("Value of pointer is ", ptr)
+	// Value of pointer is . 0xc00001e0e8
+
+	fmt.Println("Value of pointer is ", *ptr)
+	// Value of pointer is . 23
+```
+
+- var ptr 은 myNumber의 reference
+- 그대로 프린트하면 메모리 주소가 나오고
+- reference 하고 있는 변수에 * 붙이면, 포인터 내부에 무슨값이 있는지 알고 싶다라는 의미인듯.
+- mutex 부분에서 또 나옴
+- `final` 과 같은 선언은 없을까?
 
 ## Reference
 - https://go.dev/doc/

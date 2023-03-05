@@ -216,6 +216,21 @@ laguages := make(map[string]string)
     // 2
 ```
 
+## Fucntion
+- 시작은 `func`
+- `func main()` 이 고프로그램의 entry point
+- function 내부에 function 을 정의할 순 없는듯
+- function에 어떤 타입을 리턴할 것인지 정의해줘야함 (void가 아니면)
+    - 여러개의 타입이 리턴되는 것도 정의할 수 있을듯
+
+```go
+
+// int 타입형태가 리턴될 것
+func adder(i1 int, i2 int) int {
+	return i1 + i2
+}
+```
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

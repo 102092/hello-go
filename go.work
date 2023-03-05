@@ -14,4 +14,5 @@ use (
 	./11--if-else
 	./12--my-switch
 	./13--loops
+	./14--my-function
 )

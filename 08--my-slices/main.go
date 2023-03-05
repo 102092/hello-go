@@ -40,4 +40,16 @@ func main() {
 	sort.Ints(highScore)
 	fmt.Println(highScore)                     // [234 456 777 789 945]
 	fmt.Println(sort.IntsAreSorted(highScore)) // true
+
+	// how to remove a value from slices based on index ?
+	var courses = []string{"reactjs", "javascript", "swift", "python", "ruby"}
+	fmt.Println(courses)
+
+	// use append() to remove value
+
+	var index int = 2
+	// last value is non-inclusive
+	courses = append(courses[:index], courses[index+1:]...)
+	fmt.Println(courses)
+
 }

@@ -194,6 +194,11 @@ laguages := make(map[string]string)
 
 - key=string, value=string
 
+## Stuct
+- no inhertiance, No super or parent
+- `User`, 내부 변수도 Name같이 시작함.
+
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

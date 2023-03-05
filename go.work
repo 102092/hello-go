@@ -10,4 +10,5 @@ use (
 	./07--my-array
 	./08--my-slices
 	./09--my-maps
+	./10--my-structs
 )

@@ -8,4 +8,6 @@ use (
 	./05--times
 	./06--pointer
 	./07--my-array
+	./08--my-slices
+	./09--my-maps
 )

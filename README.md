@@ -186,6 +186,14 @@ GOOS="windows" go build
 - slice ?
     - `[]` 를 의미하는듯
 
+
+## Map
+```go
+laguages := make(map[string]string)
+```
+
+- key=string, value=string
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

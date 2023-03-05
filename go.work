@@ -13,4 +13,5 @@ use (
 	./10--my-structs
 	./11--if-else
 	./12--my-switch
+	./13--loops
 )

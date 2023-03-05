@@ -198,6 +198,23 @@ laguages := make(map[string]string)
 - no inhertiance, No super or parent
 - `User`, 내부 변수도 Name같이 시작함.
 
+## Switch
+- fallthrough
+    - 선언해놓으면 매칭되는 값이 나와도 다음 swtich 문으로 넘어가는듯
+
+```go
+	switch diceNumber {
+	case 1:
+		fmt.Println("Dice value is 1 and you can open")
+		fallthrough
+	case 2:
+		fmt.Println("2")
+	default:
+		fmt.Println("except 1 or 2")
+	}
+    // Dice value is 1 and you can open
+    // 2
+```
 
 ## Reference
 - https://go.dev/doc/

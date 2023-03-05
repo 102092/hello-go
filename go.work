@@ -11,4 +11,5 @@ use (
 	./08--my-slices
 	./09--my-maps
 	./10--my-structs
+	./11--if-else
 )

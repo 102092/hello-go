@@ -15,4 +15,6 @@ use (
 	./12--my-switch
 	./13--loops
 	./14--my-function
+	./15--method
+	./16--defer
 )

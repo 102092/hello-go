@@ -231,6 +231,35 @@ func adder(i1 int, i2 int) int {
 }
 ```
 
+## Defer
+```go
+func main() {
+	defer fmt.Println("world")
+	fmt.Println("Hello")
+}
+
+// Hello
+// world
+```
+- code reverse...
+- defer 키워드를 여러개 쓰면? 
+    - LIFO
+
+```go
+
+func main() {
+	defer fmt.Println("1")
+	defer fmt.Println("2")
+	defer fmt.Println("3")
+	fmt.Println("Hello")
+}
+
+// Hello
+// 3
+// 2
+// 1
+```
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

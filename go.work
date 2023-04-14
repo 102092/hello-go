@@ -17,4 +17,5 @@ use (
 	./14--my-function
 	./15--method
 	./16--defer
+	./17--file
 )

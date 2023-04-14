@@ -260,6 +260,10 @@ func main() {
 // 1
 ```
 
+## Handling web
+
+> net/http package
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

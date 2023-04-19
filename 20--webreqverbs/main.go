@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	PerformGetRequest()
+	// PerformGetRequest()
+	PerFromPostJsonRequest()
 
 }
 
@@ -37,4 +38,25 @@ func PerformGetRequest() {
 
 	fmt.Println("byte count is ", byteCount) // exactly same content length
 	fmt.Println(responseString.String())
+}
+
+func PerFromPostJsonRequest() {
+	const myurl = "http://localhost:8000/post"
+
+	// fake json payload
+	requestBody := strings.NewReader(`{
+		"name" : "hello",
+		"age" : 123
+	}`)
+
+	response, err := http.Post(myurl, "application/json", requestBody)
+
+	if err != nil {
+		panic(err)
+	}
+
+	defer response.Body.Close()
+	content, _ := ioutil.ReadAll(response.Body)
+
+	fmt.Println(string(content))
 }

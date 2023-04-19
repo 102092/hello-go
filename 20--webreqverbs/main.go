@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
 func main() {
 	// PerformGetRequest()
-	PerFromPostJsonRequest()
-
+	// PerFormPostJsonRequest()
+	PerformPostFormReqeust()
 }
 
 func PerformGetRequest() {
@@ -40,7 +41,7 @@ func PerformGetRequest() {
 	fmt.Println(responseString.String())
 }
 
-func PerFromPostJsonRequest() {
+func PerformPostJsonRequest() {
 	const myurl = "http://localhost:8000/post"
 
 	// fake json payload
@@ -50,6 +51,26 @@ func PerFromPostJsonRequest() {
 	}`)
 
 	response, err := http.Post(myurl, "application/json", requestBody)
+
+	if err != nil {
+		panic(err)
+	}
+
+	defer response.Body.Close()
+	content, _ := ioutil.ReadAll(response.Body)
+
+	fmt.Println(string(content))
+}
+
+func PerformPostFormReqeust() {
+	const myurl = "http://localhost:8000/postform"
+
+	//data
+	data := url.Values{}
+	data.Add("name", "iphone")
+	data.Add("email", "iphone@apple.com")
+
+	response, err := http.PostForm(myurl, data)
 
 	if err != nil {
 		panic(err)

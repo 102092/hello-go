@@ -1,4 +1,4 @@
-module github/102092/mymodules
+module github.com/102092/mymodules
 
 go 1.20
 

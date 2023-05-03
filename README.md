@@ -264,6 +264,37 @@ func main() {
 
 > net/http package
 
+## go mod
+
+- `go mod` is expensive operation
+- `go.sum` get specific module 
+
+### go get
+
+```go
+go get -u github.com/gorilla/mux
+```
+
+- it will bring all the assets from **web** (github.com/gorilla/mux)
+- https://github.com/gorilla/mux
+
+### go path
+
+```go
+go env
+```
+
+- GOPATH -> pkg -> mod -> cache (go 언어에서 사용되는 라이브러리들)
+
+### go mod tidy
+- 
+- https://soyoung-new-challenge.tistory.com/130
+- https://go.dev/ref/mod#go-mod-tidy
+
+### go run -mod=vendor main.go
+
+- 맨처음 vendor폴더에서 찾음
+
 ## Reference
 - https://go.dev/doc/
 - https://www.youtube.com/watch?v=JoJ8Sw5Yb4c&list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa

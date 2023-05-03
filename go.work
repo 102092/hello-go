@@ -1,4 +1,4 @@
-go 1.19
+go 1.20
 
 use (
 	./01--hello
@@ -18,4 +18,8 @@ use (
 	./15--method
 	./16--defer
 	./17--file
+	./18--webrequest
+	./19--url
+	./20--webreqverbs
+	./21--bitmorejson
 )
